@@ -21,7 +21,7 @@ function TodoList() {
     //what the removeTodo does is, it essentially does is checks the actual array for the todo and once it is found,
     // it removes it from the application
         const removeTodo = (id) => { 
-            const removedArr = [...todos.todos].filter(todo => todo.id !== id)
+            const removedArr = [...todos].filter(todo => todo.id !== id)
             
             setTodos(removedArr)
         };
