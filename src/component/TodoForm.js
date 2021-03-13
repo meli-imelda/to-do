@@ -1,9 +1,14 @@
-import React, {useState} from 'react' //We import the useState Hook from React.
+import React, {useState,useEffect,useRef} from 'react' //We import the useState Hook from React.
 // Hooks lets us keep local state in a function component.
 
 function TodoForm(props) { //this function(component) returns a form for the user to fill their to-do's
     const [input, setInput]= useState(''); //declaring a state variable 
     //The first item (input) is the current value, and the second (setInput) is a function that lets us update it with usestate
+    const inputRef = useRef(null)
+
+    useEffect(() => {
+        inputRef.current.focus() //allows you focus on whatever you put as the ref
+    })
     const handleChange = e => {
         setInput(e.target.value);  //setting input to whatever we type in ie allows the user to actually type in values
     };
@@ -29,6 +34,7 @@ function TodoForm(props) { //this function(component) returns a form for the use
                     value={input} name="text" 
                     className="todo-input"
                     onChange={handleChange} //once the input changes(onChange) then the handleChange function is called to take note of this change
+                    ref ={inputRef} //when the web page is reloaded it automatically focuses the mouse on the todo form
                 />
                 
                 <button className="todo-button">Add To-do</button>
