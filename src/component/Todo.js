@@ -13,11 +13,14 @@ function Todo (todos, completeTodo, removeTodo, updateTodo) {
     });
 
     console.log('todos is an object:', todos)
+    //todos is the object passed from TodoList and contains
+    // todos.todos which is our array
+    // and all the functions passed e.g todos.removeTodo() is the function
     console.log('todos.todos:', todos.todos)
     console.log('todos.todos length:', todos.todos.length)
 
     const submitUpdate = value => {
-        updateTodo(edit.id, value);
+        todos.updateTodo(edit.id, value);
         setEdit({
             id: null,
             value: ''
@@ -39,12 +42,12 @@ function Todo (todos, completeTodo, removeTodo, updateTodo) {
             key={index} 
         >
             {/* //in this div we are passing in the todo text */}
-            <div key= {todo.id} onClick= { () => completeTodo(todo.id)} >
+            <div key= {todo.id} onClick= { () => todos.completeTodo(todo.id)} >
                 {todo.text}
             </div>
             {/* this div enables us add react icons to our todo form */}
             <div className="icons">
-                <RiCloseCircleLine  onClick={() => removeTodo(todo.id)} className='delete-icon'/>
+                <RiCloseCircleLine  onClick={() => todos.removeTodo(todo.id)} className='delete-icon'/>
                 <TiEdit onClick={() => setEdit({id: todo.id, value: todo.text})} className='edit-icon'/>
             </div>
         </div>
