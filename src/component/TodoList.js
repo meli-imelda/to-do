@@ -15,14 +15,15 @@ function TodoList() {
 
         const newTodos = [ todo,...todos]; //enables everything to be passed on real time ie, todo is for each letter and todos for the whole string
 
-        setTodos(newTodos);
+        setTodos(newTodos) 
+        console.log(...todos)
     };
     //what the removeTodo does is, it essentially does is checks the actual array for the todo and once it is found,
     // it removes it from the application
-        const removeTodo =id =>{
-            const removeArr = [...todos].filter(todo => todo.id !== id)
+        const removeTodo = (id) => { 
+            const removedArr = [...todos.todos].filter(todo => todo.id !== id)
             
-            setTodos(removeArr)
+            setTodos(removedArr)
         };
 
         const updateTodo=(todoId, newValue) =>{
