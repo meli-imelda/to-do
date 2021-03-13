@@ -1,11 +1,11 @@
 import React, {useState} from 'react' //We import the useState Hook from React.
-// It lets us keep local state in a function component.
+// Hooks lets us keep local state in a function component.
 
 function TodoForm(props) { //this function(component) returns a form for the user to fill their to-do's
     const [input, setInput]= useState(''); //declaring a state variable 
     //The first item (input) is the current value, and the second (setInput) is a function that lets us update it with usestate
     const handleChange = e => {
-        setInput(e.target.value);  //setting input to whatever we type in ie allows the userto actually type in values
+        setInput(e.target.value);  //setting input to whatever we type in ie allows the user to actually type in values
     };
 
     const handleSubmit = e => {

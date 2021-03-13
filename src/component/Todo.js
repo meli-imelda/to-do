@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import TodoForm from './TodoForm';
+// import TodoList from './TodoList';
 import {RiCloseCircleLine} from 'react-icons/ri';
 import {TiEdit} from 'react-icons/ti';
 
@@ -54,11 +55,12 @@ function Todo (todos, completeTodo, removeTodo, updateTodo) {
     // return (
     //     <div>
     //         <h2>Hi there</h2>
-    //         {todos.todos.map((todo, index)=>(
-    //             <div 
-    //                 className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
-    //                 key={index} 
-    //             >
+    //         {
+    //                 todos.todos.map((todo, index)=>(
+    //                  <div 
+    //                      className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
+    //                      key={index} 
+    //                  >
     //                 {/* //in this div we are passing in the todo text */}
     //                 <div key= {todo.id} onClick= { () => completeTodo(todo.id)} >
     //                     {todo.text}
