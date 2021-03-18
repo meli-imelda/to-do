@@ -10,7 +10,7 @@
     background: linear-gradient(
       90deg,
       rgb(4, 7, 170) 0%,
-      rgb(4, 9, 83) 100%
+      rgb(3, 10, 110) 100%
     );
   }
   .todo-app {
@@ -19,7 +19,7 @@
     justify-content: start;
     width: 520px;
     min-height: 600px;
-    background: #07024b;
+    background: #080264;
     text-align: center;
     margin: 128px auto;
     border-radius: 10px;
@@ -143,4 +143,32 @@
   
   .edit-icon {
     color: #fff;
+  }
+
+  /* For small devices */
+  @media only screen and (max-width: 768px){
+
+    .todo-app {
+      width: 350px;
+      min-height: 450px;
+      background: #07024b;
+      text-align: center;
+      margin: 58px auto;
+      border-radius: 8px;
+      padding-bottom: 50px;
+    }
+
+    .todo-input {
+      padding: 14px 32px 14px 16px;
+      border-radius: 4px 0 0 4px;
+      border: 2px solid #b10cf3;
+      outline: none;
+      width: 230px;
+      background: transparent;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
   }
